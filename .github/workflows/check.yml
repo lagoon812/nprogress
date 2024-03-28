@@ -6,8 +6,6 @@ on:
             - master
     workflow_dispatch:
 
-concurrency:
-    group: ${{ github.workflow }}
 
 jobs:
     check-content:
